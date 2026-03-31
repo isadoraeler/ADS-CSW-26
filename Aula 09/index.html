@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Coquette</title>
+  <style>
+    /* Fundo suave com degradê rosa */
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #fff0f5);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff69b4;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #ffffffcc; /* leve transparência */
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+      width: 350px;
+    }
+
+    fieldset {
+      border: 2px solid #ffb6c1;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      background-color: #fff0f5cc;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #ff69b4;
+      padding: 0 5px;
+    }
+
+    input, textarea, select {
+      width: 95%;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 1px solid #ffb6c1;
+      outline: none;
+      font-size: 14px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #ff69b4;
+      box-shadow: 0 0 5px #ff69b4;
+    }
+
+    button {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      background-color: #ff69b4;
+      color: white;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    }
+
+    button[type="reset"] {
+      background-color: #ffc0cb;
+      color: white;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    /* Área de rádio inline delicada */
+    fieldset[name="opcoes"] input {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post">
+    <h2>🌸 Formulário Coquette 🌸</h2>
+
+    <fieldset>
+      <legend>Nome</legend>
+      <input type="text" name="nome" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Email</legend>
+      <input type="email" name="email" placeholder="exemplo@email.com" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Email pessoal</legend>
+      <input type="email" name="email_pessoal" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Senha</legend>
+      <input type="password" name="senha" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Idade</legend>
+      <input type="number" name="idade" min="0" max="120">
+    </fieldset>
+
+    <fieldset>
+      <legend>Comentário</legend>
+      <textarea name="comentario" rows="3"></textarea>
+    </fieldset>
+
+    <fieldset name="opcoes">
+      <legend>Opções</legend>
+      <input type="radio" name="opcao" value="1"> Opção 1
+      <input type="radio" name="opcao" value="2"> Opção 2
+    </fieldset>
+
+    <fieldset>
+      <legend>Esporte favorito</legend>
+      <select name="esporte">
+        <option value="">-- Escolha um esporte --</option>
+        <option value="futebol">Futebol</option>
+        <option value="basquete">Basquete</option>
+        <option value="volei">Vôlei</option>
+        <option value="natacao">Natação</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Escolha uma cor</legend>
+      <input type="color" name="cor">
+    </fieldset>
+
+    <fieldset>
+      <legend>Selecionar arquivo</legend>
+      <input type="file" name="arquivo">
+    </fieldset>
+
+    <fieldset>
+      <legend>Data e hora do envio</legend>
+      <input type="datetime-local" name="datahora">
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+  </form>
+
+</body>
+</html>
